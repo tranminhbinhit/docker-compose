@@ -1,18 +1,10 @@
 version: "3.7"
 
 services:
-  sqlserver:
-    ports:
-      - '1433:1433'
-    image: "mcr.microsoft.com/mssql/server:2022-latest"
-    volumes:
-      - dev-enow-sqlserver:/docker/sqlserver/enow:rw
+   sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
     environment:
       - SA_PASSWORD=Binh@123
       - ACCEPT_EULA=Y
-    network:
-      - sqlserver-network
-networks:
-  sqlserver-network:
-    driver:
-      bridge
+    ports:
+      - "5434:1433"

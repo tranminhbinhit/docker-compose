@@ -1,0 +1,67 @@
+version: "3.7"
+
+networks:
+  # network1:
+  #   name: my-network
+  #   attachable: true
+  #   ipam:
+  #     driver: default
+  #     config:
+  #       - subnet: 172.20.7.0/16
+  #         ip_range: 172.20.7.0/24
+  #         gateway: 172.20.7.1
+  node-red-netxxx:
+    # use the bridge driver, but enable IPv6
+    driver: bridge
+services:
+  node-red:
+    image: nodered/node-red:latest
+    ports:
+      - "2881:1880"
+    networks:
+      # - network1
+      - node-red-netxxx
+      # - nextjs-web
+      # - pub_net_network
+    #   - node-red-netxxx
+    extra_hosts:
+      - "dockerhost:172.20.7.236"
+    volumes:
+      - node-red-dataxxx:/data
+
+volumes:
+  node-red-dataxxx:
+
+# networks:
+#   nextjs-web:
+#     external:
+#       name: 'nextjs-web_default'
+#   pub_net_network:
+#     external:
+#       name: 'pub_net'
+#   node-red-netxxx:
+#     # use the bridge driver, but enable IPv6
+#     driver: bridge
+    # ipam:
+    #     driver: default
+    #     config:
+    #         - subnet: 172.20.7.0/24
+    #           gateway: 172.20.7.1
+# networks:
+#   default:
+#     ipam:
+#       driver: default
+#       config:
+#         - subnet: "172.20.7.0/24"
+# networks:
+#   default:
+#     # driver: default
+#     # config:
+#     #   - subnet: "172.20.7.0/24"
+#     #     gateway: "172.20.7.1"
+#     # driver: bridge
+#     ipam:
+#         driver: default
+#         config:
+#             - subnet: "172.20.7.0/24"
+#               gateway: "172.20.7.1"

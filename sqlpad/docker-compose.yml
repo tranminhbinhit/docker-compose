@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  sqlpad:
+    # To use Dockerfile at root of this project, use build instead of image
+    # build: ../../
+    image: sqlpad/sqlpad:5
+    hostname: 'sqlpad'
+    ports:
+      - '3000:3000'
+    environment:
+      SQLPAD_ADMIN: 'admin'
+      SQLPAD_ADMIN_PASSWORD: '123456'
+      SQLPAD_APP_LOG_LEVEL: info
+      SQLPAD_WEB_LOG_LEVEL: warn
+      SQLPAD_CONNECTIONS__sqlserverlocal__name: SQL Server Localhost
+      SQLPAD_CONNECTIONS__sqlserverlocal__driver: sqlserver
+      SQLPAD_CONNECTIONS__sqlserverlocal__host: host.docker.internal
+      SQLPAD_CONNECTIONS__sqlserverlocal__port: 5434
+      SQLPAD_CONNECTIONS__sqlserverlocal__database: COMB_TEST
+      SQLPAD_CONNECTIONS__sqlserverlocal__username: sa
+      SQLPAD_CONNECTIONS__sqlserverlocal__password: Binh@123
+    volumes:
+      - sqlpad-volume:/var/lib/sqlpad
+
+volumes:
+  sqlpad-volume:
