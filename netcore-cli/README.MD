@@ -106,8 +106,10 @@
         rm -f <file name>       : Xoá file     
         
 ## Run yaml 
-    1. Chay file yaml trên server - Chưa thành công
+    1. Chay file yaml
         kubectl apply -f hello-netcore-btestv.yaml
+        -- Chay file tren github - chưa dc 
+        kubectl apply -f https://raw.githubusercontent.com/tranminhbinhit/docker-compose/master/netcore-cli/netcore-btestv/hello-nercore-btestv.yaml?token=GHSAT0AAAAAAB6MV35Y7FSEQZU7XQZGZW2IZC3D6KQ
     
     2. Forward all server run pods (Pub ra port 3001)
         kubectl port-forward pod/hello-kube-binh 3001:80
