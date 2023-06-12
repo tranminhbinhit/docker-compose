@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "o7OiC7iCQaHCsyQ6RPUCV3NCDaE+CVpZnvMpmN2L9EI=",
+  "Source": "netcore-btestv",
+  "BasePath": "_content/netcore-btestv",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

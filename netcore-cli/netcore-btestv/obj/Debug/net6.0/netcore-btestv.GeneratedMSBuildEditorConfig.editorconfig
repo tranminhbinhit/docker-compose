@@ -1,0 +1,17 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = netcore_btestv
+build_property.RootNamespace = netcore_btestv
+build_property.ProjectDir = d:\SOURCE_GIT\github\docker-compose\netcore-cli\netcore-btestv\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = d:\SOURCE_GIT\github\docker-compose\netcore-cli\netcore-btestv
+build_property._RazorSourceGeneratorDebug = 
