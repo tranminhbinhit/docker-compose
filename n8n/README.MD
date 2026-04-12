@@ -1,0 +1,6 @@
+# Run create docker from docker-compose.yml
+Run docker file
+    docker compose up -d
+    
+Down docker files
+    docker compose down

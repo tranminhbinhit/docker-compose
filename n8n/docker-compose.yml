@@ -10,6 +10,7 @@ services:
       - n8n_data:/home/node/.n8n
     environment:
       - TZ=Asia/Ho_Chi_Minh
+      - WEBHOOK_URL=https://0fac-2402-800-639f-bdc7-81c5-56f3-e26-765b.ngrok-free.app    
     restart: unless-stopped
 
 volumes:
