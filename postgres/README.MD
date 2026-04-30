@@ -6,5 +6,18 @@ Down docker files
     docker compose down
 
 
-https://hub.docker.com/r/minio/minio
-docker pull minio/minio
+# 🔌 Cách kết nối
+👉 Từ máy local:
+Host: localhost
+Port: 5432
+User: admin
+Password: 123456
+Database: mydb
+
+# 👉 Từ container khác (ví dụ Redmine)
+Host: postgres ⚠️ (tên service)
+Port: 5432
+
+# Kiểm tra container
+docker ps
+docker logs postgres-db
